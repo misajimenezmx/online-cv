@@ -12,6 +12,12 @@
       <a href="tel:{{ sidebar.phone }}">{{ sidebar.phone }}</a>
     </li>
     {% endif %}
+    
+    {% if sidebar.phone2 %}
+    <li class="phone"><i class="fas fa-phone"></i>
+      <a href="tel:{{ sidebar.phone }}">{{ sidebar.phone2 }}</a>
+    </li>
+    {% endif %}
 
     {% if sidebar.citizenship %}
     <li class="phone"><i class="fas fa-passport"></i>
@@ -94,6 +100,12 @@
     {% if sidebar.pdf %}
     <li class="pdf"><i class="fas fa-file-pdf"></i>
       <a href="{{ sidebar.pdf }}" target="_blank">Resume PDF</a>
+    </li>
+    {% endif %}
+
+    {% if sidebar.web %}
+    <li class="pdf"><i class="fas fa-link"></i>
+      <a href="{{ sidebar.web }}" target="_blank">Resume Web</a>
     </li>
     {% endif %}
 

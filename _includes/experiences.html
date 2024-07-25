@@ -1,4 +1,5 @@
 {% assign experiences = site.data.data.experiences %}
+{% assign experiencetime = site.data.data.experiencetime %}
 {% if experiences %}
 <section class="section experiences-section">
   <h2 class="section-title">
@@ -6,7 +7,11 @@
       <i class="fas fa-circle fa-stack-2x"></i>
       <i class="fas fa-briefcase fa-stack-1x fa-inverse"></i>
     </span>
+    {% if experiencetime %}
+    {{ experiences.title }} ( {{ experiencetime }} years )
+    {% else %}
     {{ experiences.title }}
+    {% endif %}
   </h2>
 
   {% for experience in experiences.info %}
